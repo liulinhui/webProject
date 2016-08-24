@@ -1,17 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>webProject</artifactId>
+        <groupId>com.learn</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.learn</groupId>
-    <artifactId>webProject</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>web</module>
-        <module>bean</module>
-        <module>utils</module>
-        <module>persistence</module>
-    </modules>
-    <name>webProject Maven Webapp</name>
+    <artifactId>utils</artifactId>
+    <packaging>war</packaging>
+    <name>utils Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -22,6 +19,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>webProject</finalName>
+        <finalName>utils</finalName>
     </build>
 </project>
