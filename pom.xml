@@ -86,6 +86,22 @@
             <version>2.0.8</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
         <!-- log jar -->
         <dependency>
@@ -119,16 +135,6 @@
             <version>5.1.32</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
             <version>4.0</version>
@@ -146,17 +152,62 @@
             <version>1.6</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20160810</version>
         </dependency>
+        <!--字符串处理工具-->
+        <dependency>
+            <groupId>com.shekhargulati</groupId>
+            <artifactId>strman</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+        <!--Dex - 数据可视化-->
+        <dependency>
+            <groupId>com.tinkerpop.blueprints</groupId>
+            <artifactId>blueprints-dex-graph</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <!--Gumshoe - Java程序检测-->
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>github-com-cferdinandi-gumshoe</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <!--个开源的数值计算扩展-->
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-api</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+        <!--Automon是一个非常灵活的JAVA监控工具-->
+        <dependency>
+            <groupId>org.automon</groupId>
+            <artifactId>automon</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.9</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.automon</groupId>
+            <artifactId>automon</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!--WEB项目监控工具javameloday-->
+        <dependency>
+            <groupId>net.bull.javamelody</groupId>
+            <artifactId>javamelody-core</artifactId>
+            <version>1.60.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jrobin</groupId>
+            <artifactId>jrobin</artifactId>
+            <version>1.5.9</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>webProject</finalName>
