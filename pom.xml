@@ -11,6 +11,7 @@
         <module>utils</module>
         <module>persistence</module>
         <module>service</module>
+        <module>java</module>
     </modules>
     <name>webProject</name>
     <url>http://maven.apache.org</url>
