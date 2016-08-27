@@ -7,18 +7,17 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-
-import static org.springframework.http.HttpMethod.GET;
 
 @Controller
 @RequestMapping("/test")
 public class test{
-    @Value("test")
+    @Value("${test}")
     private String test;
 
-    @RequestMapping("/index.html")
+    @RequestMapping(value = "/index.html",method = {RequestMethod.GET})
     public String index(ModelMap model, HttpServletRequest request) throws Exception{
         model.put("webTest",test);
         return "test.ftl";

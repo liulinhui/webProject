@@ -6,7 +6,7 @@
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 
-    <bean id="test" class="com.learn.web.common.freemarkerVariables.test" />
+    <bean id="test" class="com.learn.web.common.freemarker.freemarkerVariables.test" />
 
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="freemarkerSettings" ref="freemarkerConfiguration"/>
@@ -17,8 +17,7 @@
             </map>
         </property>
     </bean>
-    <bean id="freemarkerConfiguration"
-          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <bean id="freemarkerConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location" value="classpath:freemarker.properties"/>
     </bean>
 
@@ -30,12 +29,14 @@
         <property name="cache" value="true"/>
         <property name="prefix" value=""/>
         <property name="suffix" value=""/>
-        <property name="order" value="2"/>
+        <property name="order" value="0"/>
         <!-- 在ftl页面中使用request.contextPath就可以获得contextPath-->
         <property name="requestContextAttribute" value="request"/>
         <!-- 使用这些宏，必须设置FreeMarkerViewResolver的exposeMacroHelpers属性为true -->
+        <property name="exposeSpringMacroHelpers" value="true" />
         <property name="exposeSessionAttributes" value="true"/>
         <property name="allowSessionOverride" value="true"/>
+        <!--<property name="exposeSpringMacroHelpers" value="true" />-->
         <!-- 将请求和会话属性作为变量暴露给freemaker模板使用-->
         <property name="exposeRequestAttributes" value="true"/>
         <property name="allowRequestOverride" value="true"/>
