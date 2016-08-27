@@ -6,9 +6,16 @@
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 
+    <bean id="test" class="com.learn.web.common.freemarkerVariables.test" />
+
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="freemarkerSettings" ref="freemarkerConfiguration"/>
         <property name="templateLoaderPath" value="/WEB-INF/ftl/"/>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="test" value-ref="test"/>
+            </map>
+        </property>
     </bean>
     <bean id="freemarkerConfiguration"
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
