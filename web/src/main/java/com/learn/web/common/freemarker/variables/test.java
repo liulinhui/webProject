@@ -1,4 +1,4 @@
-package com.learn.web.common.freemarker.freemarkerVariables;
+package com.learn.web.common.freemarker.variables;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

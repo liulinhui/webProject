@@ -6,7 +6,7 @@
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 
-    <bean id="test" class="com.learn.web.common.freemarker.freemarkerVariables.test" />
+    <bean id="test" class="com.learn.web.common.freemarker.variables.test" />
 
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="freemarkerSettings" ref="freemarkerConfiguration"/>
