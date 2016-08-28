@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.web.persistence.TestMapper">
+       <resultMap id="BaseResultMap1" type="com.learn.bean.test.user">
+              <result column="name" jdbcType="VARCHAR" property="name"/>
+              <result column="password" jdbcType="VARCHAR" property="password"/>
+       </resultMap>
+       <select id="getUsername" resultMap="BaseResultMap1" parameterType="string">
+              SELECT
+              name,password
+              FROM USER
+              WHERE name=#{name,jdbcType=VARCHAR}
+       </select>
+</mapper>
