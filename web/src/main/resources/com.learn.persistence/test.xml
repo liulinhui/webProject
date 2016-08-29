@@ -8,6 +8,6 @@
        <select id="getUser" resultMap="BaseResultMap">
               SELECT
               name,password
-              FROM USER
+              FROM user
        </select>
 </mapper>

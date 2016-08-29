@@ -8,7 +8,7 @@
        <select id="getUsername" resultMap="BaseResultMap1" parameterType="string">
               SELECT
               name,password
-              FROM USER
+              FROM user
               WHERE name=#{name,jdbcType=VARCHAR}
        </select>
 </mapper>
