@@ -1,0 +1,95 @@
+﻿.jiazai{
+	display:none;
+	position:fixed;
+}
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background:#6C6C6C ;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=40);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 390px;
+    height: 288px;
+    border: 5px solid 	#FF8000;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+	border-radius: 78px;
+}
+.confirm_buy{
+height: 33px;
+width: 75px;
+font-size: 22px;
+font-weight: bold;
+float: left;
+margin-right: 79px;
+margin-left: 150px;
+border-radius: 28px;
+color: #FF8000;
+font-family: kaiti;
+
+}
+ .cancel_buy{
+height: 33px;
+width: 75px;
+font-size: 22px;
+font-weight: bold;
+float: left;
+border-radius: 28px;
+color: #FF8000;
+font-family: kaiti;
+}
+#MyDiv .con{
+height:37px;
+width: 390px;
+}
+#MyDiv1 .con{
+height:37px;
+width: 390px;
+}
+.content2{
+font-size: 28px;
+font-weight: bold;
+color: rgba(255, 14, 0, 0.68);
+font-family: kaiti;
+}
+.content1{
+position: absolute;
+margin: 3px 137px;
+}
+#MyDiv  h2{
+color:#FF8000;
+}
+#MyDiv .xiangxi{
+color:black;
+margin: 0 14px;
+}
+#MyDiv ul li{
+margin:21px 51px;
+font-weight: bold;
+font-family: kaiti;
+}
+#MyDiv p{
+padding: 21px;
+font-family: kaiti;
+font-size: 22px;
+font-weight: bold;
+}
+#MyDiv1 p{
+padding: 21px;
+font-family: kaiti;
+font-size: 22px;
+font-weight: bold;
+}

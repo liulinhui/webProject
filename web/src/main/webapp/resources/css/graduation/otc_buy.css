@@ -1,0 +1,390 @@
+﻿/* CSS Document */
+
+/* css universal */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "微软雅黑", Arial, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+h3 {
+	color: #666;
+	font-size: 16px;
+}
+
+h5 {
+	color: #666;
+	font-size: 14px;
+}
+
+ul li {
+	list-style: none;
+}
+
+div#main {
+	background: #f1f1f1;
+	width: 100%;
+}
+
+div.inner {
+	width: 1000px;
+	margin: auto;
+}
+
+.allAccount {
+	border: solid;
+	height: 39px;
+	width: 232px;
+	color: #f99325;
+	font-size: 29pt;
+	text-align: right;
+	font-weight: bold;
+}
+
+.fenge {
+	width: 180px;
+	font-size: 29pt;
+	border: solid;
+	height: 40px;
+	margin: 0 -101px;
+	position: absolute;
+	border-color: #f99325;
+	text-align: right;
+	font-weight: bold;
+}
+
+/* css for bill */
+div.inner div.blank {
+	height: 35px;
+}
+
+div.bill {
+	width: 100%;
+	height: 350px;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+}
+
+div.bill div.header {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+div.bill div.header img {
+	margin-right: 10px;
+	padding-top: 15px;
+	padding-left: 10px;
+	float: left;
+}
+
+div.bill div.header h3 {
+	color: #646cb8;
+	font-size: 16px;
+	padding-top: 15px;
+}
+
+div.bill div.header h3 span {
+	padding-left: 20px;
+	color: #f99325;
+	font-size: 14px;
+}
+
+div.bill div.info {
+	width: 680px;
+	float: left;
+}
+
+div.bill div.info div.rate {
+	width: 220px;
+	height: 220px;
+	float: left;
+}
+
+div.bill div.info div.rate h2 {
+	font-family: Tahoma;
+	color: #f99325;
+	font-size: 40px;
+	padding-top: 40px;
+	text-align: center;
+}
+
+div.bill div.info div.rate h2 span {
+	color: #999;
+	font-size: 32px;
+	font-family: kaiti;
+	margin: 7px 4px;
+	position: absolute;
+	    
+}
+
+div.bill div.info div.rate h6 {
+	color: #666;
+	font-size: 14px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+div.bill div.info div.rate p {
+	color: #333;
+	font-size: 14px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+div.bill div.info div.rate p span {
+	padding-left: 10px;
+	color: #999;
+	font-size: 12px;
+}
+
+div.bill div.info div.rate div.line {
+	width: 1px;
+	height: 60px;
+	background-color: #d8d8d8;
+	float: right;
+	margin-top: -120px;
+}
+
+div.bill div.info div.warning img {
+	margin: -40px 0 10px 220px;
+}
+
+div.bill div.info div.tip {
+	width: 520px;
+	height: 50px;
+	margin: auto;
+}
+
+div.bill div.info div.tip img {
+	margin: 0px 3px 0 0;
+	float: left;
+}
+
+div.bill div.info div.tip h6 {
+	color: #f99325;
+	margin-left: 15px;
+}
+
+div.bill div.confirm {
+	width: 310px;
+	height: 260px;
+	float: right;
+	background-color: #f5f5f8;
+	margin: 10px 10px 0 0;
+}
+
+div.bill div.confirm div.amount {
+	width: 270px;
+	height: 74px;
+	background-color: #fff;
+	margin: 20px;
+}
+
+div.bill div.confirm div.amount h2 {
+	font-family: Tahoma;
+	color: #f99325;
+	font-size: 36px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+div.bill div.confirm div.amount h2 span {
+	color: #999;
+	font-size: 31px;
+	font-family: kaiti;
+}
+
+div.bill div.confirm div.amount h5 {
+	text-align: center;
+}
+
+div.bill div.confirm div.warn {
+	padding-top: 20px;
+	width: 270px;
+	margin: auto;
+}
+
+div.bill div.confirm div.warn h5 {
+	right: 18px;
+	margin-left: 36px;
+}
+
+div.bill div.confirm div.warn img {
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+div.bill div.confirm div.warn span#text {
+	color: #4c55aa;
+	font-size: 18px;
+	margin: 5px;
+}
+
+div.bill div.confirm div.warn span#amount {
+	color: #333;
+	font-size: 16px;
+	margin: 2px;
+}
+
+div.bill div.confirm div.warn span#recharge {
+	width: 41px;
+	height: 21px;
+	float: right;
+	background: url('/SpringMvcStudy/resource/images/images2/recharge.png')
+		no-repeat;
+	margin-top: -20px;
+}
+
+div.bill div.confirm div.warn span#register {
+	width: 41px;
+	height: 21px;
+	float: right;
+	background: url('/SpringMvcStudy/resource/images/images2/register.png')
+		no-repeat;
+	margin-top: -20px;
+}
+
+div.bill div.confirm div.warn span#register:hover {
+	float: right;
+	background:
+		url('/SpringMvcStudy/resource/images/images2/register_hangon.png')
+		no-repeat;
+}
+
+div.bill div.confirm div.button {
+	width: 260px;
+	height: 40px;
+	margin: 42px 30px 0 30px;
+}
+
+div.bill div.confirm div.button#conbuy {
+	background:
+		url('/SpringMvcStudy/resource/images/images2/conbuy_button.png')
+		no-repeat;
+}
+
+div.bill div.confirm a:hover div.button#conbuy {
+	background:
+		url('/SpringMvcStudy/resource/images/images2/conbuy_hangon_button.png')
+		no-repeat;
+}
+
+/* css for table */
+div.similar {
+	width: 100%;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	margin-top: 20px;
+}
+
+div.similar div.header {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+div.similar div.header div.bar {
+	width: 3px;
+	height: 60px;
+	background-color: #f99325;
+	float: left;
+}
+
+div.similar div.header h4 {
+	color: #666;
+	font-size: 16px;
+	padding: 20px 20px 20px 20px;
+	float: left;
+}
+
+div.similar table {
+	width: 940px;
+}
+
+div.similar table thead tr th {
+	background: #fff;
+}
+
+div.similar table thead tr th:first-child {
+	margin-right: 15px;
+}
+
+div.similar table tbody tr td:first-child {
+	margin-right: 15px;
+}
+
+div.similar table tbody tr:last-child {
+	border: 0;
+}
+
+/* css for instruction */
+div.instr {
+	height: 244px;
+	width: 100%;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	margin-top: 20px;
+}
+
+div.instr ul {
+	margin-top: 25px;
+}
+
+div.instr ul li {
+	margin-bottom: 15px;
+}
+
+div.instr ul li p.title {
+	float: left;
+	padding-left: 30px;
+	color: #f99325;
+	font-size: 14px;
+}
+
+div.instr ul li div.cont {
+	width: 500px;
+	margin-left: 100px;
+	color: #666;
+}
+
+div.instr div.pdf {
+	width: 250px;
+	height: 100px;
+	float: right;
+	margin-top: -200px;
+}
+
+div.instr div.pdf img {
+	float: left;
+}
+
+div.instr div.pdf ul {
+	float: left;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+
+div.instr div.pdf ul li {
+	margin-bottom: 10px;
+	color: #666;
+}
+
+div.instr div.pdf ul li img {
+	padding-left: 25px;
+	float: right;
+}
+
+.fengZi {
+	    margin-left: 92px;
+}

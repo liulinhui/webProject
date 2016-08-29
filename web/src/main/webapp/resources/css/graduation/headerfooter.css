@@ -1,0 +1,451 @@
+.h-inner a:hover {
+	text-decoration: underline;
+}
+
+.h-inner {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.h-inner p.breadcrumb {
+	position: absolute;
+	margin-top: 88px;
+	font-size: 12px;
+	color: #666;
+}
+
+.header-top {
+	height: 20px;
+	width: 100%;
+	background: #f6f7fb;
+	border-bottom: 1px solid #ededed;
+	padding: 7px 0;
+	position: relative;
+	z-index: 99;
+	width: 100%;
+	font-size: 12px;
+}
+
+.header-top .sns {
+	float: left;
+	margin-right: 20px;
+}
+
+.header-top .sns a {
+	float: left;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	text-indent: -99em;
+	background: url(/SpringMvcStudy/resource/images/images/h_sns.png)
+		no-repeat;
+	margin-right: 10px;
+}
+
+.header-top .sns a.qq {
+	background-position: 2px center;
+}
+
+.header-top .sns a.wx {
+	background-position: -24px center;
+}
+
+.header-top .tel {
+	float: left;
+	color: #446076;
+	line-height: 20px;
+}
+
+.header-top .tel em {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.header-top .links {
+	float: right;
+	line-height: 20px;
+}
+
+.header-top .links a {
+	margin-left: 15px;
+	color: #446076;
+}
+
+.header-top .links span {
+	color: #0080cc;
+}
+
+.header-top .links a.special {
+	color: #0080cc;
+	margin: 6px;
+	font-weight: bold;
+}
+
+.header-top #wx-qr {
+	position: absolute;
+	left: -12px;
+	top: 23px;
+	z-index: 999;
+	display: none;
+}
+
+.header-top #sj-qr {
+	position: absolute;
+	right: 38px;
+	top: 23px;
+	z-index: 999;
+	display: none;
+}
+
+.header-con {
+	padding: 25px 0;
+	border-bottom: 1px solid #cacaca;
+	height: 54px;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	font-size: 12px;
+}
+
+.header-con #logo {
+	float: left;
+	*z-index: 1;
+	*position: relative;
+	height: 70px;
+	weight: 240px
+}
+
+.header-con #logo img {
+	float: left;
+	*z-index: 1;
+	*position: relative;
+	height: 70px;
+	weight: 240px
+}
+
+.header-con .nav {
+	float: right;
+	line-height: 54px;
+	height: 54px;
+}
+
+.header-con .nav a {
+	color: #666666;
+	font-size: 16px;
+	margin-right: 45px;
+}
+
+.header-con .nav a:hover {
+	color: #1f567c
+}
+
+.header-con .nav a.active {
+	color: #1f567c;
+	font-weight: bold;
+}
+
+.header-con .h-search {
+	float: right;
+	z-index: 99;
+	width: 130px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #dddddd;
+	margin-top: 11px;
+	border-radius: 3px;
+	padding: 5px 10px;
+	position: relative;
+}
+
+.header-con .h-search #s-input {
+	width: 102px;
+	line-height: 29px;
+	height: 25px;
+	*float: left;
+	margin: -3px;
+}
+
+.header-con .h-search #s-btn {
+	width: 20px;
+	height: 20px;
+	background: url(/SpringMvcStudy/resource/images/images/s_input_icon.png)
+		no-repeat center center;
+	overflow: hidden;
+	display: block;
+	float: right;
+	text-indent: -99em;
+}
+
+.header-con .h-search #s-result {
+	display: none;
+	width: 130px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	border-top: 0 none;
+	border-radius: 0 0 3px 3px;
+	background: #fff;
+	position: absolute;
+	right: -1px;
+	top: 31px;
+	z-index: 99;
+}
+
+.header-con .h-search #s-result li {
+	line-height: 24px;
+}
+
+.header-con .h-search #s-result li a {
+	color: #666;
+	font-size: 14px;
+	font-family: kaiti;
+	font-weight: bold;
+}
+
+.header-con .h-search #s-result li a:hover {
+	color: #f99325;
+}
+
+#footer-nf {
+	width: 100%;
+	background: #5d5d5d;
+	padding: 0 0 10px;
+	height: 200px;
+}
+
+#footer-nf a:hover {
+	text-decoration: underline;
+}
+
+#footer-nf .f-inner {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#footer-nf .links li {
+	float: left;
+	width: 110px;
+	margin-right: 39px;
+	*margin-right: 38px;
+}
+
+#footer-nf .links li h4 {
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 18px;
+	line-height: 24px;
+}
+
+#footer-nf .links li p {
+	line-height: 30px;
+}
+
+#footer-nf .links li p a {
+	color: #fff;
+}
+
+#footer-nf .links li.item-spe {
+	width: auto;
+	margin-right: 65px;
+	*width: 220px;
+}
+
+#footer-nf .links li.item-spe .img-box {
+	margin-bottom: 15px;
+}
+
+#footer-nf .links li.item-spe p {
+	color: #f9fafc;
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 40px;
+}
+
+#footer-nf .links .f-select {
+	position: relative;
+	height: 32px;
+}
+
+#footer-nf .links .f-select a.tit {
+	width: 160px;
+	height: 26px;
+	line-height: 26px;
+	padding: 2px 34px 2px 14px;
+	display: block;
+	border: 1px solid #ddd;
+	color: #999;
+	font-size: 16px;
+	border-radius: 5px;
+	background: url(../images/f_select_icon.png) no-repeat 180px center #fff;
+	position: relative;
+}
+
+#footer-nf .links .f-select a.tit:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#footer-nf .links .f-select a.tit:active {
+	background-color: #fafafa;
+}
+
+#footer-nf .links .f-select .links-box {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 35px;
+	width: 180px;
+	border: 1px solid #ddd;
+	padding: 10px 14px;
+	background: #fff;
+	border-radius: 5px;
+	max-height: 120px;
+	overflow: auto;
+}
+
+#footer-nf .links .f-select .links-box a {
+	display: block;
+	width: 100%;
+	line-height: 24px;
+	font-size: 14px;
+	color: #666;
+	overflow: hidden;
+}
+
+#footer-nf .links .f-select .links-box a:hover {
+	text-decoration: underline;
+}
+
+#footer-nf .links li.qr {
+	margin-right: 0;
+	width: auto;
+	*width: 122px;
+}
+
+#footer-nf .logos {
+	clear: both;
+	text-align: center;
+	padding-top: 40px;
+	margin-bottom: 20px;
+}
+
+#footer-nf .logos a {
+	margin: 0 5px;
+}
+
+#footer-nf .copyright {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	line-height: 22px;
+}
+
+#float-bar {
+	position: fixed;
+	right: -77px;
+	top: 350px;
+	_position: absolute;
+	_bottom: auto;
+	_top: expression(eval(document.documentElement.scrollTop) +400);
+	_z-index: 9999;
+}
+
+#float-bar .con {
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 0 0 0 2px;
+	width: 75px;
+	background: #fff;
+}
+
+#float-bar .btn-set {
+	padding-left: 8px;
+	padding-right: 2px;
+}
+
+#float-bar .btn-set li {
+	border-bottom: 1px solid #ddd;
+	padding: 13px 0;
+}
+
+#float-bar .btn-set li.ol-im {
+	border: 0 none;
+}
+
+#float-bar .btn-set li a {
+	display: block;
+	padding-top: 40px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 14px;
+	color: #666666;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: 15px -84px;
+}
+
+#float-bar .btn-set li a:hover {
+	color: #0d4c75;
+	background-position: 15px 5px;
+}
+
+#float-bar .btn-set li.buy a {
+	background-image:
+		url(/SpringMvcStudy/resource/images/images/float_icon1.png);
+}
+
+#float-bar .btn-set li.ol-im a {
+	background-image:
+		url(/SpringMvcStudy/resource/images/images/float_icon2.png);
+}
+
+#float-bar .back-top a {
+	display: block;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background: url(/SpringMvcStudy/resource/images/images/backtop.png)
+		no-repeat center 8px #0d4c75;
+}
+
+#float-bar .handle {
+	position: absolute;
+	left: -39px;
+	top: -1px;
+	display: block;
+	width: 38px;
+	height: 40px;
+	border: 1px solid #ddd;
+	border-right: 0 none;
+	border-radius: 8px 0 0 8px;
+	background: url(/SpringMvcStudy/resource/images/images/float_handle.png)
+		no-repeat 14px center #ff7200;
+}
+
+#float-bar .handle.opened {
+	background-position: -33px center;
+}
+
+body {
+	min-width: 1000px;
+}
+
+html {
+	_width: 100%;
+	_overflow-x: hidden;
+}
+
+.footer-weiba {
+	color: #999;
+	font-size: 48px;
+	font-family: kaiti;
+	margin: 66px 225px;
+	position: absolute;
+	font-weight: bold;
+}

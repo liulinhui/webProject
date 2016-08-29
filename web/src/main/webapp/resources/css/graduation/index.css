@@ -1,0 +1,576 @@
+﻿/* CSS Document */
+* { margin:0; padding:0; border:0;}
+body {  font-family: "微软雅黑",Arial,sans-serif; font-size:14px; }
+table {border-spacing: 0;border-collapse: collapse;}
+a { text-decoration:none; color:#666;}
+.f-left{float:left;}
+.f-right{float:right;}
+.nodisplay{display:none;}
+.clear {clear:both;}
+.clearfix:after{content: "";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;font-size:0;}
+.clearfix{*zoom:1;}
+.inner {width: 100%;margin: 0 auto}
+div.scroll{width:100px; margin:auto;}
+/* unsorted list */
+ul.links{list-style-type:none;}
+
+/*sm-details css*/
+.section {
+	overflow: hidden;
+	background-color: #f9f9f9;
+	height: 203px;
+	width: 100%;
+	border:1px solid #e3e3e3;
+	margin-bottom: 60px;
+
+}
+.section .left,.section .center,.section .right{
+	float: left;
+}
+.section .left{
+	padding:22px 37px 0 27px;
+}
+.section .left table td,.section .left table th{
+	border:1px solid #ddd;
+	width: 185px;
+}
+.section .left table th{
+	height: 43px;
+	padding: 0;
+	vertical-align: middle;
+}
+.section .left table td{
+	height: 117px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0;
+}
+.section .left table th h5{
+	color: #0080cc;
+	padding-left: 30px;
+	background:url(/SpringMvcStudy/resource/images/images/details_section_icon.png) no-repeat 2px 2px;
+	width: 85px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+.section .left table th h5.level{
+	background-position: 2px -43px;
+}
+.section .left table td.income span{
+	color: #ff7200;
+	font-size: 40px;
+	display: block;
+	line-height: 50px;
+}
+.section .left table td.star li{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+}
+.section .left table td.star label {
+	float: left;
+}
+.section .left table td.star span{
+	display: inline-block;
+	width: 88px;
+	height: 40px;
+	overflow: hidden;
+	float: right;
+	margin-right: 18px;
+	background:url(/SpringMvcStudy/resource/images/images/details_star.png) no-repeat 4px 12px;
+}
+.section .left table td.star span.four-star{
+	background-position: 4px 12px;
+}
+.section .left table td.star span.three-star{
+	background-position: -18px 12px;
+}
+.section .left table td.star span.two-star{
+	background-position: -40px 12px;
+}
+.section .left table td.star span.one-star{
+	background-position: -62px 12px;
+}
+.section .left table td.star span.no-star{
+	background-position: -84px 12px;
+}
+.section .center{
+	padding: 14px 36px 0 0;
+	width: 245px;
+}
+.section .center h1{
+	font-size: 26px;
+	line-height: 52px;
+	color: #0080cc;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 4px;
+}
+.section .center table td{
+	padding: 0;
+	vertical-align: middle;
+	height: 30px;
+}
+.section .center table tr td span{
+	padding-left: 18px;
+}
+.section .center table tr.net-value td span{
+	color: #ff7200;
+	font-size: 20px;
+	
+}
+.section .right{
+	position: relative;
+	top:38px;
+	height: 80px;
+}
+.section .right .money{
+	border:1px solid #ddd;
+	width: 210px;
+	height: 60px;
+	text-align: center;
+	padding-top:20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.section .right .money h3{
+	color: #ff7200;
+	font-size: 24px;
+	position: absolute;
+	background:url(/SpringMvcStudy/resource/images/images/right_money_bg.png) no-repeat center center;
+	top: -20px;
+	width: 100%;
+	left: 0;
+	line-height: 30px;
+	*line-height: 40px;
+	*width: 210px;
+}
+.section .right .money h3 span{
+	font-size:36px;
+}
+.section .right .money p{
+	font-size: 12px;
+	line-height: 18px;
+	padding-bottom: 6px;
+}
+.section .right .money .status{
+	background-color: #efefef;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	*width: 210px;
+}
+.section .right .money .status span{
+	color: #0080cc;
+	padding-left: 11px;
+}
+.section .right a{
+	display: block;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ff7200;
+	width: 160px;
+	height: 48px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 48px;
+	margin: 0 auto;	
+	*margin: 0 0 0 30px;
+}
+.section .right a:hover{
+	background-color: #d76305;
+}
+.tab{
+	margin-bottom: 22px;
+}
+.tab .btn{
+	position: relative;
+}
+.tab .btn a{
+	width: 197px;
+	display: inline-block;
+	text-align: center;
+	background-color: #70757a;
+	height: 34px;
+	bottom:0px;
+	position: absolute;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	color: #fff;
+	line-height: 34px;
+}
+.tab .btn a h5{
+	padding-left: 29px;
+	background:url(/SpringMvcStudy/resource/images/images/tab_icon.png) no-repeat 56px 10px;
+}
+.tab .btn a.tab-1{
+	left: 0;
+}
+.tab .btn a.tab-2{
+	left: 198px;
+}
+.tab .btn a.tab-2 h5{
+	background-position: 56px -26px;
+}
+.tab .btn a.tab-3{
+	left: 396px;
+}
+.tab .btn a.tab-3 h5{
+	background-position: 63px -62px;
+}
+.tab .btn a.tab-4{
+	left: 594px;
+}
+.tab .btn a.tab-4 h5{
+	background-position: 61px -102px;
+}
+.tab .btn a.tab-5{
+	left: 792px;
+	border-right: 1px solid #ddd;
+}
+.tab .btn a.tab-5 h5{
+	background-position: 60px -141px;
+}
+.tab .btn a.active{
+	background-color: #fff;
+	color:#0080cc;
+	background:url(/SpringMvcStudy/resource/images/images/tab_btn_a_bkg.png) repeat-x;
+	height: 50;
+}
+.tab .btn a h5.active{
+	padding-top: 9px;
+}
+.tab .btn a.tab-1 h5.active{
+	background-position: 56px -172px;	
+}
+.tab .btn a.tab-2 h5.active{
+	background-position: 56px -216px;	
+}
+.tab .btn a.tab-3 h5.active{
+	background-position: 63px -261px;	
+}
+.tab .btn a.tab-4 h5.active{
+	background-position: 61px -307px;	
+}
+.tab .btn a.tab-5 h5.active{
+	background-position: 60px -367px;	
+}
+.tab .con{
+	display: none;
+	width: 988px;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+}
+.tab .con.show{
+	display: block;
+}
+
+.tab .con-1 .year-box{
+	height: 43px;
+	background-color: #f5f5f5;
+	padding-top:12px;
+	width: 988px;
+}
+.tab .con-1 .year-box .year{
+	display: inline-block;
+	width: 82px;
+	height: 30px;
+	background-color: #eee;
+	color: #444;
+	border:1px solid #e7e7e7;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	margin-right: 24px;
+}
+.tab .con-1 .year-box .first{
+	margin-left: 56px;
+}
+.tab .con-1 .year-box .year.active{
+	background-color: #0080cc;
+	color: #fff;
+	border-color: #0080cc;
+}
+.tab .con-1 .year-box .year:hover{
+	background-color: #0080cc;
+	color: #fff;
+	border-color: #0080cc;
+}
+.tab .con-1 .trend{
+	height: 308px;
+	width: 988px;
+	display: none;
+}
+.tab .con-1 .trend.show{
+	display: block;
+}
+.tab .con-1 .trend .line-box{
+	float: right;
+	padding-top: 20px;
+}
+.tab .con-1 .trend .line-box ul li{
+	float: left;
+	margin-right: 27px;
+	font-size: 12px;
+	color: #444;
+	margin-bottom: 10px;
+}
+.tab .con-1 .trend .line-box ul li span{
+	display: inline-block;
+	width: 29px;
+	height: 5px;
+	overflow: hidden;
+	text-indent: 1000px;
+	margin-bottom: 2px;
+	margin-right: 4px;
+}
+.tab .con-1 .trend .line-box ul li span.red{
+	background-color: #ff440a;
+}
+.tab .con-1 .trend .line-box ul li span.blue{
+	background-color: #0080cc;
+}
+.tab .con-1 .trend .img-box{
+	text-align: center;
+}
+.tab .con-2 .date{
+	float: right;
+	padding: 22px 58px 10px 0;
+}
+.tab .con-2 table{
+	clear:both;
+	border:1px solid #ddd;
+	width: 870px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+.tab .con-2 table thead th{
+	background-color: #f5f5f5;
+	height: 39px;
+	vertical-align: middle;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+}
+.tab .con-2 table tbody td{
+	text-align: center;
+	height: 50px;
+	vertical-align: middle;
+	color:#666;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+}
+.tab .con-2 table tbody td.red{
+	color: #ff0000;
+}
+.tab .con-2 table tbody td.green{
+	color: #29cc19;
+}
+.tab .con-2 table tbody th{
+	vertical-align: middle;
+	border-bottom: 1px solid #ddd;
+	background-color: #e9eff5;
+}
+.tab .con-3 .products{
+	padding-top:44px;
+}
+.tab .con-3 table{
+	border:1px solid #ddd;
+	width: 871px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.tab .con-3 table th{
+	height: 50px;
+	background-color: #e9eff5;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	width: 110px;
+	text-align: left;
+	padding:0 0 0 30px;
+}
+.tab .con-3 table td{
+	vertical-align: middle;
+	width: 302px;
+	border-bottom: 1px solid #ddd;
+	padding:0 0 0 25px;
+}
+.tab .con-4 .photo{
+	float: left;
+	padding-left: 54px;
+	padding-top: 50px;
+}
+.tab .con-4 .photo h3{
+	font-size: 18px;
+	color: #444;
+	font-weight: bold;
+	text-align: center;
+	line-height: 54px;
+}
+.tab .con-4 .introduction{
+	float: left;
+	padding: 34px 39px 33px 20px;
+	width: 700px;
+}
+.tab .con-4 .introduction h4{
+	padding-left: 20px;
+	background: url(/SpringMvcStudy/resource/images/images/sm_square.png) no-repeat 0 10px ;
+	color: #666;
+	font-weight: bold;
+	line-height: 30px;
+}
+.tab .con-4 .introduction p{
+	padding-left: 20px;
+	line-height: 22px;
+	padding-bottom: 12px;
+}
+.tab .con-4 .introduction ul li{
+	padding-left: 20px;
+	line-height: 22px;
+}
+.tab .con-5 .know{
+	padding: 47px 0;
+}
+.tab .con-5 .know table{
+	width: 872px;
+	margin: 0 auto;
+	border:1px solid #ddd;
+}
+.tab .con-5 .know table th{
+	height: 60px;
+	background-color: #e9eff5;
+	font-weight: bold;
+	color: #666;
+	vertical-align: middle;
+	text-align: left;
+	padding:0 0 0 29px;
+	width: 115px;
+	border-bottom: 1px solid #ddd;
+}
+.tab .con-5 .know table td{
+	width: 271px;
+	vertical-align: middle;
+	padding:0 0 0 24px;
+	border-bottom: 1px solid #ddd;
+}
+.similar h2{
+	padding-left: 58px;
+	height: 46px;
+	line-height: 46px;
+	color: #0080cc;
+	font-size: 16px;
+	background: url(/SpringMvcStudy/resource/images/images/similar_icon.png) no-repeat 30px 17px #ededed;
+	border-top:1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+.similar table{
+	border:1px solid #ddd;
+	width: 100%;
+	margin-bottom: 28px;
+}
+.similar table thead th{
+	background-color: #0080cc;
+	height: 50px;
+	color: #fff;
+	vertical-align: middle;
+	border:1px solid #0080cc;
+}
+.similar table thead th.id{
+	width: 145px;
+}
+.similar table thead th.name{
+	width: 145px;
+}
+.similar table thead th.return{
+	width: 97px;
+}
+.similar table tbody th{
+	font-size: 20px;
+	color: #0080cc;
+	height: 50px;
+	vertical-align: middle;
+	font-style: italic;
+}
+.similar table tbody tr.even{
+	background-color: #f5f5f5;
+}
+.similar table tbody td{
+	text-align: center;
+	vertical-align: middle;
+}
+.similar table tbody td.red{
+	color: #fe3131;
+}
+.similar table tbody td.green{
+	color: #07b413;
+}
+.similar table tbody td a{
+	display: block;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background-color: #ff7200;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.similar table tbody td a:hover{
+	background-color: #d76305;
+}
+.similar .bottom #pager{
+	height: 37px;
+	float: right;
+}
+.similar .bottom #pager a{
+	display: block;
+	float: left;
+	padding: 0 4px;
+	line-height: 34px;
+}
+.similar .bottom #pager .p-prev,.bottom #pager .p-next{
+	width: 100px;
+	height: 34px;
+	border:1px solid #ddd;
+	border-radius: 5px;
+	color: #666;
+	text-align: center;
+	margin:0 12px;
+}
+.similar .bottom #pager a.p-now{
+	font-weight: bold;
+}
+.similar .bottom #pager p{
+	float: left;
+	font-size: 14px;
+	line-height: 34px;
+	padding-right: 12px;
+}
+.similar .bottom #pager span.total{
+	width: 24px;
+	display: inline-block;
+}
+.similar .bottom #pager input{
+	float: left;
+	display: block;
+	width: 50px;
+	height: 35px;
+	text-align: center;
+	border:1px solid #ddd;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.similar .bottom #pager a.jump{
+	border:1px solid #0080cc;
+	color: #0080cc;
+	width: 60px;
+	text-align: center;
+	border-radius: 5px;
+	margin-right: 14px;
+}

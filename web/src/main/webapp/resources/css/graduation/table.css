@@ -1,0 +1,118 @@
+/* CSS Document */
+/* css table Mall@GTJA */
+* { margin:0; padding:0; border:0;}
+table {border-spacing: 0;border-collapse: collapse;}
+.underline:hover{
+	text-decoration:underline;
+}
+.pro-table{
+	text-align: center;
+}
+.pro-table table{
+	width: 1200px;
+	margin:auto;
+
+}
+.pro-table table tr th{	vertical-align: middle;}
+.pro-table thead{
+	color: #666;
+	font-size:14px;
+	border-bottom:3px solid #d8d8d8;
+}
+.pro-table thead tr th{
+	padding: 0 0;
+	height: 50px;
+	background-color: #f1f1f1;
+}
+.pro-table thead tr th img.filter{padding-left:5px;}
+
+.pro-table tbody tr{
+	color: #666;
+	font-size:16px;
+	border-bottom:1px solid #d8d8d8;
+}
+
+.pro-table tbody tr td{	height: 70px;	vertical-align: middle;	font-size: 16px;}
+.pro-table tbody tr td.name{	color: #333;	font-size: 18px;		margin-top: 20px; text-align:left;}
+.pro-table tbody tr td.name p{	color: #333;	font-size: 14px; text-align:left; margin-left:30px;}
+.pro-table tbody tr td img.trans {margin-right:10px; margin-top:1px;}
+.pro-table tbody tr td.rate{	color: #f99325;	font-size: 30px;	font-family: Verdana;	}
+.pro-table tbody tr span.per {color:#666; font-size:16px}
+
+.pro-table tbody tr td.amount{
+	color: #ee2323;
+	font-size: 16px;
+	font-family: Verdana;
+}
+.pro-table tbody tr td.start{padding-right:20px;}
+.pro-table tbody tr td.status{position:absolute; margin:20px 0 0 -20px;}
+.pro-table tbody tr td a{
+	display: block;
+	width: 110px;
+	height: 35px;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.pro-table tbody tr td a:hover{
+	background-color:#f1f1f1;
+	opacity:0.8;
+}
+
+.pro-table div.title{
+	height:60px;
+}
+.pro-table h4.title{
+	color:#666;
+	font-size:18px;
+	padding-top:20px;
+	width:100px;
+	margin:auto;
+}
+
+
+.chat-table {
+	width: 1200px;
+	margin:auto;
+	margin-bottom: 40px;
+}
+.chat-table table{
+	width: 100%;
+	border: 1px solid #ddd;
+}
+.chat-table table td {
+	height: 30px;
+	padding: 20px 40px;
+	vertical-align: middle;
+	border-bottom: 1px solid #ddd;
+	color: 666666;
+	font-size: 14px;
+}
+.chat-table table thead td {
+	background: url(/SpringMvcStudy/resource/images/images2/qa_icon.jpg) no-repeat 28px center #f5f5f5;
+	color: #0080cc;
+	font-size: 14px;
+	padding: 13px 30px;
+}
+.chat-table table thead h2 {
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 40px;
+	color: #666;
+}
+.chat-table table p{
+	line-height: 25px;
+	padding-left: 32px;
+	background: url(/SpringMvcStudy/resource/images/images2/answer_icon.jpg) no-repeat left top;
+}
+.chat-table table p.qus {
+	background: url(/SpringMvcStudy/resource/images/images2/ask_icon.jpg) no-repeat left center;
+	margin-bottom: 10px;
+}
+.chat-table span#showhide{
+	float:right;
+	margin-top:-20px;
+}
+
+.bg {background-color:#f1f1f1; cursor:pointer;}

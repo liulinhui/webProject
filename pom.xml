@@ -234,6 +234,13 @@
             <artifactId>jrobin</artifactId>
             <version>1.5.9</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk16</artifactId>
+            <version>1.46</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>webProject</finalName>
