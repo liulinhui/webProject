@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="zh-CN" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>相关协议</title>
+   <link rel="shortcut icon" href="/SpringMvcStudy/resource/images/images2/No_Smoking11.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="/SpringMvcStudy/resource/css/permission.css"/>
+  <link rel="stylesheet" type="text/css" href="/SpringMvcStudy/resource/css/headerfooter.css"/>
+  <link rel="stylesheet" type="text/css" href="/SpringMvcStudy/resource/css/table.css"/>
+  <script type="text/javascript" src="/SpringMvcStudy/resource/js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="/SpringMvcStudy/resource/js/script.headerfooter.js"></script>
+  <script type="text/javascript" src="/SpringMvcStudy/resource/js/permission.js"></script>
+  <!--[if lte IE 9]>
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+      <script type="text/javascript">
+        $(function(){
+          $('input, textarea').placeholder();
+        })
+      </script>
+  <![endif]-->
+  <!--[if IE 6]>
+  <script src="./js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DD_belatedPNG.fix('#wx-qr img,#sj-qr img,#footer-nf .img-box img,#float-bar .handle,#float-bar .btn-set li.ol-im a,#float-bar .btn-set li.buy a,#float-bar .back-top a,#s-btn,#header-nf .header-top .sns a,background');
+  </script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="header-top">
+    <div class="h-inner">
+     <div class="tel">毕业设计：<em>基于SpringMvc的理财产品转让系统设计</em></div>
+      <div class="links">
+        <a id="login" href="./account_Login">登录</a>
+        <a id="reg" href="./account_Reg">注册</a>
+        <a href="">我的订单</a>
+      </div>     
+    </div>
+  </div>
+ <div class="header-con">
+		<div class="h-inner">
+			<a href="./otc" id="logo"><img
+				src="/SpringMvcStudy/resource/images/images2/logo.jpg"></a>
+			<div class="h-search">
+				<input type="text" id="s-input" placeholder="名称/代码" /> <a 
+					id="s-btn" title="搜索">搜索</a>
+				<div id="s-result">
+					<ul class="s-search" style="list-style:none;height: 165px;overflow: scroll;">
+					</ul>
+				</div>
+			</div>
+			<div class="nav">
+				<a href="./otc">首页</a><a href="./myproduct" >我要转让</a><a
+					href="./myAsset">我的账户</a>
+			</div>
+			<p class="breadcrumb">
+				<a href="">毕业设计</a><a href="">>OTC转让专区</a>
+			</p>
+		</div>
+	</div>
+  <div id="main">
+    <div class="inner">
+			<div class="blank" id="head">
+			</div>
+			<ul id="tab">
+				<li class="current"><span class="icon"></span><a href="javascript:void(0);"><p>《xxxx证券股份有限公司柜台交易客户协议》</p></a><div></div></li>
+				<li><span class="icon"></span><a href="javascript:void(0);"><p>《xxxx证券股份有限公司柜台交易风险提示函》</p></a><div></div></li>
+				<li><span class="icon"></span><a href="javascript:void(0);"><p>《xxxx证券股份有限公司柜台交易电子签名约定书》</p></a><div></div></li>
+			</ul>
+			<div id="content">
+					<ul style="display:block;">
+						<h4>xxxx证券股份有限公司柜台交易客户协议</h4>
+							<li><p class="left">甲方（客户）：</p><p class="right">乙方：xxxx证券股份有限公司</p></li>
+							<li><p class="left">法定代表人：</p><p class="right">法定代表人：xxx</p></li>
+							<li><p class="left">住所：</p><p class="right">住所：人民大会堂</p></li>
+							<p class="text">
+
+						　　鉴于：<br>
+1. 甲方具有合法的参与柜台交易的主体资格，不存在有关法律法规禁止或限制进行柜台交易的情形； <br>
+2. 乙方是依法设立的证券经营机构，具有合法开展柜台交易业务的资格；<br>
+3. 甲方自愿成为乙方柜台交易业务的客户，乙方同意为甲方提供柜台交易、托管、清算交收等所需的设施与服务。<br><br><br>
+
+依据《中华人民共和国证券法》、《证券公司监督管理条例》、《证券公司柜台交易业务规范》及其他相关法律法规的规定以及乙方关于柜台交易业务的相关制度、指引及规则文件（以下简称“业务规则”），为明确双方的权利和义务，规范双方业务行为，甲、乙双方经过平等协商，就甲方参与乙方主持下的柜台交易等相关事宜订立本协议。<br><br><br>
+
+　　
+第一章 一般规定<br>
+
+第一条 甲方自愿采用乙方提供的柜台交易系统（以下简称“交易系统”）进行交易，乙方为甲方提供与柜台交易交易系统有关的交易、托管、清算交收的设施和服务。<br>
+
+第二条 甲方在其交易过程中，应当随时关注自己的交易变化情况，并妥善处理自己参与的交易。<br>
+
+第三条 乙方主要以数据电文形式，通过交易系统向甲方发送成交记录、结算数据、函件、通知、信息等，并辅助以其他书面送达方式。<br>
+
+第四条 如出现交易异常情况，为控制交易风险，乙方有权按照业务规则的具体规定视情况采取相应风险控制措施，包括但不限于暂停某一产品的交易、强制某一产品退出柜台交易等。<br>
+
+第五条 乙方有权根据实际情况对业务规则进行修改并以在乙方营业场所、网站或交易系统公告形式通知甲方，业务规则自公告之日起生效，甲方对此予以认可，并承诺遵照修订后的有关规定执行。<br>
+
+第六条 乙方对甲方的交易记录及其它资料负有保密义务，非经有权机关要求或经甲方同意，不得向第三方透露，否则乙方应承担相应责任。<br><br><br>
+
+　
+第二章 开户<br>
+第一条 甲方参与柜台交易业务需根据乙方业务规则要求提供资料及文件，通过乙方的资质审查，并在乙方开立柜台交易产品账户。<br>
+第二条 甲方开立柜台交易产品账户后，应按照机密的原则保管柜台交易产品账户密码：避免将密码提供给除法律规定外的任何人；采取其他合理措施，防止密码被窃取。由于密码泄露造成的后果由甲方承担，乙方不承担任何责任。甲方应谨慎保管数字证书（如有，下同），不得将数字证书提供给除法律规定外的任何单位和个人，由于数字证书损毁、遗失和/或密码泄露造成的后果由甲方承担。甲方交易密码或数字证书（如有）如果遗失或损坏，甲方有责任在第一时间到乙方挂失，在挂失生效前已经发生的交易的损失由甲方承担。<br>
+第三条 甲方应当根据乙方开立证券资金账户规则另行签署资金账户开户协议开立柜台交易资金账户。如甲方已在乙方开立证券资金账户，则无需另行开立资金账户，乙方柜台交易系统采用现有的资金账户记录甲方资金变动、资金清算交收、利息处理和账户质押冻结等。<br>
+第四条 甲方所有通过其柜台交易账户（柜台交易产品账户和资金账户的统称，以下简称为“交易账户”）、交易账户密码及数字证书信息（如有）校验发出的查询与交易指令，均视为甲方真实意愿的表示，由此所产生的一切后果由甲方承担。<br>
+</p>
+					</ul>
+					<ul>
+												<h4>xxxx证券股份有限公司柜台交易风险提示函</h4>
+							
+							<p class="text">
+
+						　尊敬的证券投资者：<br>
+当您投资柜台交易证券市场的时候，可能获得较高的投资收益，但同时也存在着较大的投资风险。为了使您更好地了解其中的风险，根据有关证券法律法规、行政规章，特提供本风险揭示书，请您认真详细阅读：<br><br>
+
+　　
+第一章 一般规定<br>
+
+第一条 甲方自愿采用乙方提供的柜台交易系统（以下简称“交易系统”）进行交易，乙方为甲方提供与柜台交易交易系统有关的交易、托管、清算交收的设施和服务。<br>
+
+第二条 甲方在其交易过程中，应当随时关注自己的交易变化情况，并妥善处理自己参与的交易。<br>
+
+第三条 乙方主要以数据电文形式，通过交易系统向甲方发送成交记录、结算数据、函件、通知、信息等，并辅助以其他书面送达方式。<br>
+
+第四条 如出现交易异常情况，为控制交易风险，乙方有权按照业务规则的具体规定视情况采取相应风险控制措施，包括但不限于暂停某一产品的交易、强制某一产品退出柜台交易等。<br>
+
+第五条 乙方有权根据实际情况对业务规则进行修改并以在乙方营业场所、网站或交易系统公告形式通知甲方，业务规则自公告之日起生效，甲方对此予以认可，并承诺遵照修订后的有关规定执行。<br>
+
+第六条 乙方对甲方的交易记录及其它资料负有保密义务，非经有权机关要求或经甲方同意，不得向第三方透露，否则乙方应承担相应责任。<br><br><br>
+
+　
+第二章 开户<br>
+第一条 甲方参与柜台交易业务需根据乙方业务规则要求提供资料及文件，通过乙方的资质审查，并在乙方开立柜台交易产品账户。<br>
+第二条 甲方开立柜台交易产品账户后，应按照机密的原则保管柜台交易产品账户密码：避免将密码提供给除法律规定外的任何人；采取其他合理措施，防止密码被窃取。由于密码泄露造成的后果由甲方承担，乙方不承担任何责任。甲方应谨慎保管数字证书（如有，下同），不得将数字证书提供给除法律规定外的任何单位和个人，由于数字证书损毁、遗失和/或密码泄露造成的后果由甲方承担。甲方交易密码或数字证书（如有）如果遗失或损坏，甲方有责任在第一时间到乙方挂失，在挂失生效前已经发生的交易的损失由甲方承担。<br>
+第三条 甲方应当根据乙方开立证券资金账户规则另行签署资金账户开户协议开立柜台交易资金账户。如甲方已在乙方开立证券资金账户，则无需另行开立资金账户，乙方柜台交易系统采用现有的资金账户记录甲方资金变动、资金清算交收、利息处理和账户质押冻结等。<br>
+第四条 甲方所有通过其柜台交易账户（柜台交易产品账户和资金账户的统称，以下简称为“交易账户”）、交易账户密码及数字证书信息（如有）校验发出的查询与交易指令，均视为甲方真实意愿的表示，由此所产生的一切后果由甲方承担。<br>
+</p>
+					</ul>
+					<ul>
+						 						<h4>xxxx证券股份有限公司柜台交易电子签名约定书</h4>
+							<p class="text">
+
+						　本证券投资者（下称“本投资者”）郑重承诺如下：<br>
+1、本投资者同意自签订本电子签名约定书之日起，在参与xxxx证券股份有限公司（以下简称“xxxx证券”）各项业务过程中使用电子合同、电子签名。本投资者通过身份验证登录xxxx证券的交易系统，确认同意接受相关电子合同或文书的，视为同意签署合同，与在纸质合同上手写签名或盖章具有同等的法律效力，无需另行签署纸质合同或文书。<br>
+    2、本投资者将妥善管理密码、第三方认证证书（如有）等身份验证信息，经本投资者身份验证登录本投资者账户的所有操作视同本投资者本人行为，本投资者承担由此产生的一切法律后果。<br>
+</p>
+					</ul>
+			</div>
+		</div>
+  </div>
+ 
+ <div id="footer-nf">
+		<div>
+		<p class="footer-weiba">基于SpringMVC的理财产品转让系统设计</p>
+		</div>
+		</div>
+</body>
+</html>
