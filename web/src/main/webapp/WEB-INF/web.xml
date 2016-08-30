@@ -42,6 +42,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
+            classpath:net/bull/javamelody/monitoring-spring.xml
             classpath:applicationContext.xml
         </param-value>
     </context-param>
@@ -52,7 +53,9 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:dispatch-servlet.xml</param-value>
+            <param-value>
+                classpath:dispatch-servlet.xml
+            </param-value>
         </init-param>
         <init-param>
             <param-name>default_encoding</param-name>
@@ -91,14 +94,27 @@
 
     <!--WEB项目监控工具javameloday-->
     <filter>
-        <filter-name>monitoring</filter-name>
+        <filter-name>javamelody</filter-name>
         <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
+        <!--<async-supported>true</async-supported>-->
+        <init-param>
+            <param-name>authorized-users</param-name>
+            <param-value>admin:liulinhui, user2:pwd2</param-value>
+        </init-param>
+        <init-param>
+            <param-name>javamelody.log</param-name>
+            <param-value>true</param-value>
+        </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>monitoring</filter-name>
+        <filter-name>javamelody</filter-name>
         <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <!--<dispatcher>ASYNC</dispatcher>-->
     </filter-mapping>
     <listener>
         <listener-class>net.bull.javamelody.SessionListener</listener-class>
     </listener>
+
+
 </web-app>

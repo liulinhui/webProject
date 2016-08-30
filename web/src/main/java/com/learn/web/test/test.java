@@ -27,7 +27,7 @@ public class test{
     public String index(ModelMap model, HttpServletRequest request) throws Exception{
         model.put("webTest",test);
         List<user> user=testMapper.getUser();
-        System.out.println(testMapper.getUser().size());
+        System.out.println(testMapper.getUser().get(0).getName()+"======="+testMapper.getUser().get(0).getPassword());
         System.out.println(testMapper.getUsername("123").size());
         return "test.ftl";
     }

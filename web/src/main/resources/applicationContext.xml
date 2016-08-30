@@ -25,4 +25,30 @@
         </property>
     </bean>
 
+    <!--<bean id="monitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">-->
+        <!--<property name="pointcut">-->
+            <!--<bean class="net.bull.javamelody.MonitoredWithAnnotationPointcut"/>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>-->
+    <!--<bean id="springDataSourceBeanPostProcessor" class="net.bull.javamelody.SpringDataSourceBeanPostProcessor">-->
+        <!--<property name="excludedDatasources">-->
+            <!--<set>-->
+                <!--<value>excludedDataSourceName</value>-->
+            <!--</set>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+     <!--<bean id="wrappedDataSource" class="net.bull.javamelody.SpringDataSourceFactoryBean">-->
+        <!--<property name="targetName" value="targetDataSource" />-->
+    <!--</bean>-->
+
+    <!--<bean id="facadeMonitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">-->
+        <!--<property name="pointcut">-->
+            <!--<bean class="net.bull.javamelody.MonitoredWithInterfacePointcut">-->
+                <!--<property name="interfaceName" value="com.learn.bean.test.user" />-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+
 </beans>
