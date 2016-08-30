@@ -1,7 +1,7 @@
-package com.learn.test;
+package com.learn.utils;
 
 /**
  * Created by linkage on 2016/8/29.
  */
-public class Test {
+public class info {
 }

@@ -1,4 +1,4 @@
-package com.learn.graduation;
+package com.learn.utils.graduation;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

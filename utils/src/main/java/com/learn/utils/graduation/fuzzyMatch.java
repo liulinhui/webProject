@@ -1,4 +1,4 @@
-package com.learn.graduation;
+package com.learn.utils.graduation;
 interface MatchHander{  
     boolean compare(int a, int b);
 } 

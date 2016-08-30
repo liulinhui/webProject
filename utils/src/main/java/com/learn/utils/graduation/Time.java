@@ -1,4 +1,4 @@
-package com.learn.graduation;
+package com.learn.utils.graduation;
 import java.util.Timer;
            //定时器类，用来定时执行某段任务；
 public class Time {

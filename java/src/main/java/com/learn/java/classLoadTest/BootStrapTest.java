@@ -1,4 +1,4 @@
-package com.learn.classLoadTest;
+package com.learn.java.classLoadTest;
 
 
 import javax.print.DocFlavor;
