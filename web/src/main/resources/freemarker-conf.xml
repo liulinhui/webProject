@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--freemarker-->
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
@@ -29,17 +29,13 @@
         <property name="cache" value="true"/>
         <property name="prefix" value=""/>
         <property name="suffix" value=""/>
-        <property name="order" value="0"/>
-        <!-- 在ftl页面中使用request.contextPath就可以获得contextPath-->
-        <property name="requestContextAttribute" value="request"/>
-        <!-- 使用这些宏，必须设置FreeMarkerViewResolver的exposeMacroHelpers属性为true -->
-        <property name="exposeSpringMacroHelpers" value="true" />
-        <property name="exposeSessionAttributes" value="true"/>
-        <property name="allowSessionOverride" value="true"/>
+        <property name="order" value="2"/>
+        <!--<property name="requestContextAttribute" value="request" />-->
+        <!--&lt;!&ndash; 将请求和会话属性作为变量暴露给FreeMarker模板使用。要做到这一点，可以设置exposeRequestAttributes或者exposeSessionAttributes为true &ndash;&gt;-->
+        <!--<property name="exposeRequestAttributes" value="true" />-->
+        <!--<property name="exposeSessionAttributes" value="true" />-->
+        <!--&lt;!&ndash; 使用这些宏，必须设置FreeMarkerViewResolver的exposeMacroHelpers属性为true &ndash;&gt;-->
         <!--<property name="exposeSpringMacroHelpers" value="true" />-->
-        <!-- 将请求和会话属性作为变量暴露给freemaker模板使用-->
-        <property name="exposeRequestAttributes" value="true"/>
-        <property name="allowRequestOverride" value="true"/>
     </bean>
 
     <!--spring mvc 使用direct/forward-->
