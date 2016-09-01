@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
     <!-- 自动扫描 -->
-    <context:component-scan base-package="com.learn.web" />
+    <context:component-scan base-package="com.learn.web"/>
     <import resource="*-conf.xml"/>
 
     <!--spring 容器初始化完成后执行此方法-->
@@ -27,38 +27,39 @@
         </property>
     </bean>
 
-    <task:annotation-driven /> <!-- 定时器开关-->
-    <bean id="myTask" class="com.learn.web.test.schedulingTasks.ScheduledTasks"></bean>
-    <task:scheduled-tasks>
-        <!--
-            这里表示的是每隔五秒执行一次
-        -->
-        <task:scheduled ref="myTask" method="taskA" cron="*/5 * * * * ?" />
-        <task:scheduled ref="myTask" method="taskB" cron="*/10 * * * * ?"/>
-    </task:scheduled-tasks>
+    <task:annotation-driven/> <!-- 定时器开关-->
+    <!--<bean id="myTask" class="com.learn.web.test.schedulingTasks.ScheduledTasks"></bean>-->
+    <!--<task:scheduled-tasks>-->
+        <!--&lt;!&ndash;这里表示的是每隔五秒执行一次&ndash;&gt;-->
+        <!--<task:scheduled ref="myTask" method="taskA" cron="*/5 * * * * ?"/>-->
+        <!--<task:scheduled ref="myTask" method="taskB" cron="*/10 * * * * ?"/>-->
+    <!--</task:scheduled-tasks>-->
+
+
+
     <!--<bean id="monitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">-->
-        <!--<property name="pointcut">-->
-            <!--<bean class="net.bull.javamelody.MonitoredWithAnnotationPointcut"/>-->
-        <!--</property>-->
+    <!--<property name="pointcut">-->
+    <!--<bean class="net.bull.javamelody.MonitoredWithAnnotationPointcut"/>-->
+    <!--</property>-->
     <!--</bean>-->
     <!--<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>-->
     <!--<bean id="springDataSourceBeanPostProcessor" class="net.bull.javamelody.SpringDataSourceBeanPostProcessor">-->
-        <!--<property name="excludedDatasources">-->
-            <!--<set>-->
-                <!--<value>excludedDataSourceName</value>-->
-            <!--</set>-->
-        <!--</property>-->
+    <!--<property name="excludedDatasources">-->
+    <!--<set>-->
+    <!--<value>excludedDataSourceName</value>-->
+    <!--</set>-->
+    <!--</property>-->
     <!--</bean>-->
 
-     <!--<bean id="wrappedDataSource" class="net.bull.javamelody.SpringDataSourceFactoryBean">-->
-        <!--<property name="targetName" value="targetDataSource" />-->
+    <!--<bean id="wrappedDataSource" class="net.bull.javamelody.SpringDataSourceFactoryBean">-->
+    <!--<property name="targetName" value="targetDataSource" />-->
     <!--</bean>-->
 
     <!--<bean id="facadeMonitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">-->
-        <!--<property name="pointcut">-->
-            <!--<bean class="net.bull.javamelody.MonitoredWithInterfacePointcut">-->
-                <!--<property name="interfaceName" value="com.learn.bean.test.user" />-->
-            <!--</bean>-->
-        <!--</property>-->
+    <!--<property name="pointcut">-->
+    <!--<bean class="net.bull.javamelody.MonitoredWithInterfacePointcut">-->
+    <!--<property name="interfaceName" value="com.learn.bean.test.user" />-->
+    <!--</bean>-->
+    <!--</property>-->
     <!--</bean>-->
 </beans>
