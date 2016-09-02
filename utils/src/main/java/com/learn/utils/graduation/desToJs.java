@@ -20,14 +20,11 @@ public class desToJs {
 
     /**
      * des加密/解密
-     * 
-     * @Copyright Copyright (c) 2006
-     * @author Guapo
-     * @see desCore
-     */
-
-    /*
-     * encrypt the string to string made up of hex return the encrypted string
+     * @param data
+     * @param firstKey
+     * @param secondKey
+     * @param thirdKey
+     * @return
      */
     public String strEnc(String data, String firstKey, String secondKey,
             String thirdKey) {
