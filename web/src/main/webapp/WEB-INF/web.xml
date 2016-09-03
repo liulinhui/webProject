@@ -54,7 +54,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                classpath:dispatch-servlet.xml
+                classpath:spring-mvc.xml
             </param-value>
         </init-param>
         <init-param>
@@ -67,6 +67,7 @@
         <servlet-name>SpringMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
     <!--session-->
     <session-config>
         <session-timeout>60</session-timeout>
