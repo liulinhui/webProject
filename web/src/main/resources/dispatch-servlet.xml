@@ -2,13 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
     <context:annotation-config/>
     <context:property-placeholder location="classpath*:web.properties" ignore-unresolvable="true"/>
     <mvc:annotation-driven>
@@ -18,6 +18,10 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+     <!--最重要:::如果放在applicationContext.xml中，这里的aop设置将不会生效 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!-- 启用MVC注解 -->
+    <mvc:annotation-driven />
     <context:component-scan base-package="com.learn.web">
         <context:exclude-filter type="annotation"
                                 expression="org.springframework.stereotype.Service"/>

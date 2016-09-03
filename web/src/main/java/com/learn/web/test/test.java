@@ -5,6 +5,7 @@ package com.learn.web.test;
 
 import com.learn.bean.test.user;
 import com.learn.web.persistence.TestMapper;
+import com.learn.web.test.springaop.annotation.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ public class test{
     @Autowired
     private TestMapper testMapper;
 
+    @Log(name="您访问了index方法")
     @RequestMapping(value = "/index.html",method = {RequestMethod.GET})
     public String index(ModelMap model, HttpServletRequest request) throws Exception{
         model.put("webTest",test);
