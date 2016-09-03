@@ -1,0 +1,1 @@
+<#assign reourcesPath="/resources/backEnd"/>
