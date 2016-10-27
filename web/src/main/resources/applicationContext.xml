@@ -27,7 +27,8 @@
         </property>
     </bean>
 
-    <task:annotation-driven/> <!-- 定时器开关-->
+    <task:annotation-driven/>
+     <!--定时器开关-->
     <!--<bean id="myTask" class="com.learn.web.test.schedulingTasks.ScheduledTasks"></bean>-->
     <!--<task:scheduled-tasks>-->
         <!--&lt;!&ndash;这里表示的是每隔五秒执行一次&ndash;&gt;-->
