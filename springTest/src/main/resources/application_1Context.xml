@@ -9,4 +9,5 @@
        <bean id = "liulinhui" class = "com.learn.springTest.ApplicationContext.init.Example">
               <property name="name" value="liulinhui"></property>
        </bean>
+       <bean class = "com.learn.springTest.ApplicationContext.ApplicationEvent.MessageListener"></bean>
 </beans>
