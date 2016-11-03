@@ -10,6 +10,7 @@
         <module>web</module>
         <module>utils</module>
         <module>java</module>
+        <module>springTest</module>
     </modules>
     <name>webProject</name>
     <url>http://maven.apache.org</url>
