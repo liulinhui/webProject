@@ -5,6 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
        <!-- 自动扫描 -->
-       <context:component-scan base-package="com.learn.web"/>
-       <import resource="application_**Context.xml"/>
+       <!--ApplicationContext预先初始化所有的单例的bean-->
+       <bean id = "liulinhui" class = "com.learn.springTest.ApplicationContext.init.Example">
+              <property name="name" value="liulinhui"></property>
+       </bean>
 </beans>
