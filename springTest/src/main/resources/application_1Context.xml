@@ -10,4 +10,7 @@
               <property name="name" value="liulinhui"></property>
        </bean>
        <bean class = "com.learn.springTest.ApplicationContext.ApplicationEvent.MessageListener"></bean>
+
+       <bean id="messageService" class="com.learn.springTest.ApplicationContextAware.MessagePrinter"></bean>
+       <bean id="llh" class="com.learn.springTest.ApplicationContextAware.LiuLinHui"></bean>
 </beans>
