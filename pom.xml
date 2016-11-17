@@ -11,6 +11,7 @@
         <module>utils</module>
         <module>java</module>
         <module>springTest</module>
+        <module>servletTest</module>
     </modules>
     <name>webProject</name>
     <url>http://maven.apache.org</url>
