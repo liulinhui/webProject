@@ -63,4 +63,22 @@
     <!--</bean>-->
     <!--</property>-->
     <!--</bean>-->
+
+
+    <bean id="TestTask" class="com.learn.web.test.ThreadTest.TestTask"></bean>
+    <bean id="ThreadPoolMonitorService" class="com.learn.web.test.ThreadTest.ThreadPoolMonitorService">
+        <property name="monitoringPeriod"  value="5" />
+    </bean>
+    <bean id="TestRejectedExecutionHandler" class="com.learn.web.test.ThreadTest.TestRejectedExecutionHandler"></bean>
+    <bean id="TestThreadPoolExecutorService" class="com.learn.web.test.ThreadTest.TestThreadPoolExecutorService">
+        <property name="corePoolSize"  value="30" />
+        <property name="maxPoolSize"   value="50" />
+        <property name="keepAliveTime" value="100" />
+        <property name="queueCapacity" value="100" />
+        <property name="testRejectedExecutionHandler" ref="TestRejectedExecutionHandler" />
+    </bean>
+    <bean id="Starter" class="com.learn.web.test.ThreadTest.Starter">
+        <property name="threadPoolMonitorService" ref="ThreadPoolMonitorService" />
+        <property name="testThreadPoolExecutorService" ref="TestThreadPoolExecutorService" />
+    </bean>
 </beans>
