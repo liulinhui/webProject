@@ -1,6 +1,7 @@
 package com.learn.web.test.ThreadTest;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -8,10 +9,10 @@ import java.util.concurrent.ThreadPoolExecutor;
  * Created by liulinhui on 2016/11/26.
  */
 public class Starter {
-
+    @Autowired
+    private IThreadPoolMonitorService threadPoolMonitorService;
     private static Logger log = Logger.getLogger(TestRejectedExecutionHandler.class);
 
-    IThreadPoolMonitorService threadPoolMonitorService;
     ITestThreadPoolExecutorService testThreadPoolExecutorService;
 
     public void start() {
@@ -28,22 +29,22 @@ public class Starter {
         monitor.start();
 
         // New tasks are executed...
-        for(int i=0;i<100;i++) {
-            executor.execute(new TestTask("Task"+i));
+        for (int i = 0; i < 35; i++) {
+            executor.execute(new TestTask("Task" + i));
         }
 
-        try {
-            Thread.sleep(4000);
-        } catch (Exception e)   {
-            log.error(e.getMessage());
-        }
-        log.info("休息寺庙中");
-        for(int i=100;i<190;i++) {
-            executor.execute(new TestTask("Task"+i));
-        }
+//        try {
+//            Thread.sleep(4000);
+//        } catch (Exception e)   {
+//            log.error(e.getMessage());
+//        }
+//        log.info("休息寺庙中");
+//        for(int i=50;i<100;i++) {
+//            executor.execute(new TestTask("Task"+i));
+//        }
 
         // executor is shutdown...
-        executor.shutdown();
+//        executor.shutdown();
     }
 
     public IThreadPoolMonitorService getThreadPoolMonitorService() {

@@ -14,6 +14,7 @@ public class TestTask implements Runnable {
     }
 
     public TestTask(String taskName) {
+        log.info("======新创建好多线程============");
         this.taskName = taskName;
     }
 
