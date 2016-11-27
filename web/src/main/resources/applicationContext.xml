@@ -64,7 +64,7 @@
     <!--</property>-->
     <!--</bean>-->
 
-
+    <!--Spring ThreadPoolExecutor-->
     <bean id="TestTask" class="com.learn.web.test.ThreadTest.TestTask"></bean>
     <bean id="ThreadPoolMonitorService" class="com.learn.web.test.ThreadTest.ThreadPoolMonitorService">
         <property name="monitoringPeriod"  value="5" />
