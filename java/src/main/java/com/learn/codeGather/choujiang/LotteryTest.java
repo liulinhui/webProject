@@ -15,11 +15,10 @@ public class LotteryTest {
 	public static void main(String[] args) {
 		List<Gift> gifts = new ArrayList<Gift>();
 		// 序号==物品Id==物品名称==概率
-		gifts.add(new Gift("C券", 0.5d));
-		gifts.add(new Gift("100元", 0.05d));
-		gifts.add(new Gift("50元", 0.1d));
-		gifts.add(new Gift("100M", 0.2d));
-		gifts.add(new Gift("500M", 0.15d));
+		gifts.add(new Gift("C券", 0.0024d));
+		gifts.add(new Gift("100元", 0.0072d));
+		gifts.add(new Gift("50元", 0.16d));
+		gifts.add(new Gift("100M", 0.8304d));
 		List<Double> orignalRates = new ArrayList<Double>(gifts.size());
 		for (Gift gift : gifts) {
 			double probability = gift.getProbability();
@@ -31,7 +30,7 @@ public class LotteryTest {
 
 		// statistics
 		Map<Integer, Integer> count = new HashMap<Integer, Integer>();
-		double num = 2000;
+		double num = 1250;
 		for (int i = 0; i < num; i++) {
 			int orignalIndex = LotteryUtil.lottery(orignalRates);
 
