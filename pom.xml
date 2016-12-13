@@ -30,6 +30,7 @@
         <slf4j.api.version>1.7.1</slf4j.api.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.log4j.version>1.7.1</slf4j.log4j.version>
+        <io.vertx.version>3.3.3</io.vertx.version>
     </properties>
     <dependencies>
         <dependency>
@@ -253,6 +254,18 @@
             <groupId>io.netty</groupId>
             <artifactId>netty</artifactId>
             <version>3.10.6.Final</version>
+        </dependency>
+
+        <!--io.vertx-->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>${io.vertx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+            <version>${io.vertx.version}</version>
         </dependency>
 
         <!--redis.clients/jedis -->
