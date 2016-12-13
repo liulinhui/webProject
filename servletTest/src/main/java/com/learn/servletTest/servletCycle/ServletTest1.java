@@ -63,4 +63,8 @@ public class ServletTest1 extends HttpServlet {
         out.flush();
         out.close();
     }
+
+    public void destroy(){
+        logger.info("销毁当前ServletTest1");
+    }
 }
