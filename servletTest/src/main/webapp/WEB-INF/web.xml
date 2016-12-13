@@ -4,4 +4,17 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>ServletTest1</servlet-name>
+        <servlet-class>com.learn.servletTest.servletCycle.ServletTest1</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>fuck</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletTest1</servlet-name>
+        <url-pattern>/servletCycle/ServletTest1</url-pattern>
+    </servlet-mapping>
 </web-app>
