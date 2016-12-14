@@ -19,7 +19,7 @@ public class TestRedis {
     @Autowired
     private RedisClientTemplate redisClientTemplate;
 
-    @RequestMapping("/test")
+    @RequestMapping(value = "/test",produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String index() {
         logger.error("===========error错误日志测试=================================");
@@ -30,7 +30,8 @@ public class TestRedis {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < 1000; i++)
             sb.append(redisClientTemplate.get("index" + i));
-        JSONObject jsonObject = new JSONObject(sb);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("result",sb.toString());
         return jsonObject.toString();
     }
 }
