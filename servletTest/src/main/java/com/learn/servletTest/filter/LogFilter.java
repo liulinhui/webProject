@@ -1,10 +1,13 @@
 package com.learn.servletTest.filter;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-/**Java中的Filter 并不是一个标准的Servlet ，
+/**
+ * Java中的Filter 并不是一个标准的Servlet ，
  * 它不能处理用户请求，也不能对客户端生成响应。
  * 主要用于对HttpServletRequest 进行预处理，
  * 也可以对HttpServletResponse 进行后处理，是个典型的处理链。
@@ -14,6 +17,7 @@ import java.io.IOException;
  * Created by linkage on 2016-12-13.
  */
 public class LogFilter implements Filter {
+    private static Logger logger = Logger.getLogger(LogFilter.class);
     FilterConfig config;
 
     public void destroy() {
@@ -25,12 +29,12 @@ public class LogFilter implements Filter {
         // 获取ServletContext 对象，用于记录日志
         ServletContext context = this.config.getServletContext();
         //long before = System.currentTimeMillis();
-        System.out.println("before the log filter!");
+        logger.info("before the log filter!");
         //context.log("开始过滤");
         // 将请求转换成HttpServletRequest 请求
         HttpServletRequest hreq = (HttpServletRequest) req;
         // 记录日志
-        System.out.println("Log Filter已经截获到用户的请求的地址:"+hreq.getServletPath() );
+        logger.info("Log Filter已经截获到用户的请求的地址:" + hreq.getServletPath());
         //context.log("Filter已经截获到用户的请求的地址: " + hreq.getServletPath());
         try {
             // Filter 只是链式处理，请求依然转发到目的地址。
@@ -38,7 +42,7 @@ public class LogFilter implements Filter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("after the log filter!");
+        logger.info("after the log filter!");
         //long after = System.currentTimeMillis();
         // 记录日志
         //context.log("过滤结束");
@@ -48,7 +52,7 @@ public class LogFilter implements Filter {
     }
 
     public void init(FilterConfig config) throws ServletException {
-        System.out.println("begin do the log filter!");
+        logger.info("begin do the log filter!");
         this.config = config;
     }
 
