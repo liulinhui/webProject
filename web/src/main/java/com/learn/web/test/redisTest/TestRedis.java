@@ -25,10 +25,13 @@ public class TestRedis {
         logger.error("===========error错误日志测试=================================");
         logger.warn("==============warn错误日志测试=================================");
         logger.fatal("==============fatal错误日志测试=================================");
-        for (int i = 0; i < 1000; i++)
-            redisClientTemplate.set("index" + i, "操你大爷的，这是第" + i + "个数啦！！！！");
+        for (int i = 0; i < 100; i++){
+            redisClientTemplate.setex("index" + i,20000, "操你大爷的，这是第" + i + "个数啦！！！！");
+            System.out.println(redisClientTemplate.ttl("index" + i));
+            redisClientTemplate.expire("index" + i,5);
+        }
         StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 100; i++)
             sb.append(redisClientTemplate.get("index" + i));
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("result",sb.toString());
