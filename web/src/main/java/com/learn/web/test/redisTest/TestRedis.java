@@ -1,5 +1,6 @@
 package com.learn.web.test.redisTest;
 
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -14,19 +15,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/redisTest")
 public class TestRedis {
-
+    private static Logger logger = Logger.getLogger(TestRedis.class);
     @Autowired
     private RedisClientTemplate redisClientTemplate;
 
     @RequestMapping("/test")
     @ResponseBody
     public String index() {
+        logger.error("===========error错误日志测试=================================");
+        logger.warn("==============warn错误日志测试=================================");
+        logger.fatal("==============fatal错误日志测试=================================");
         for (int i = 0; i < 1000; i++)
-            redisClientTemplate.set("index" + i, "操你大爷的，这是第"+i+"个数啦！！！！");
-        StringBuffer sb=new StringBuffer();
+            redisClientTemplate.set("index" + i, "操你大爷的，这是第" + i + "个数啦！！！！");
+        StringBuffer sb = new StringBuffer();
         for (int i = 0; i < 1000; i++)
             sb.append(redisClientTemplate.get("index" + i));
-        JSONObject jsonObject=new JSONObject(sb);
+        JSONObject jsonObject = new JSONObject(sb);
         return jsonObject.toString();
     }
 }
