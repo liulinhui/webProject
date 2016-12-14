@@ -3,11 +3,34 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-       <context:property-placeholder location="classpath:redis.properties" />
-       <context:component-scan base-package="com.learn.web.test.redisTest">
-       </context:component-scan>
-       <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
-              <property name="maxIdle" value="${redis.maxIdle}" />
-              <property name="testOnBorrow" value="${redis.testOnBorrow}" />
-       </bean>
+    <context:property-placeholder location="classpath:redis.properties"/>
+    <context:component-scan base-package="com.learn.web.test.redisTest">
+    </context:component-scan>
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!--最大空闲连接数, 默认8个-->
+        <property name="maxIdle" value="10"/>
+        <!--最大连接数, 默认8个-->
+        <property name="maxTotal" value="10"/>
+        <!--是否启用后进先出, 默认true-->
+        <property name="lifo" value="true"/>
+        <!--连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true-->
+        <property name="blockWhenExhausted" value="true"/>
+        <!--在获取连接的时候检查有效性, 默认false-->
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+    </bean>
+    <bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool" scope="singleton">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1">
+            <list>
+                <bean class="redis.clients.jedis.JedisShardInfo">
+                    <constructor-arg name="host" value="127.0.0.1"/>
+                    <constructor-arg name="port" value="6379"/>
+                    <constructor-arg name="timeout" value="300"/>
+                    <property name="password" value="linkage@12345"/>
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>

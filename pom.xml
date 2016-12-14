@@ -119,11 +119,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.data</groupId>-->
-            <!--<artifactId>spring-data-redis</artifactId>-->
-            <!--<version>1.6.0.RELEASE</version>-->
-        <!--</dependency>-->
 
         <!--spring security-->
         <dependency>
@@ -248,11 +243,11 @@
         </dependency>
 
         <!-- com.google.guava/guava -->
-        <!--<dependency>-->
-        <!--<groupId>com.google.guava</groupId>-->
-        <!--<artifactId>guava</artifactId>-->
-        <!--<version>19.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>19.0</version>
+        </dependency>
 
         <!-- netty -->
         <dependency>
@@ -284,6 +279,11 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.0.2.RELEASE</version>
         </dependency>
 
 
