@@ -4,7 +4,13 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-/**
+/**Java中的Filter 并不是一个标准的Servlet ，
+ * 它不能处理用户请求，也不能对客户端生成响应。
+ * 主要用于对HttpServletRequest 进行预处理，
+ * 也可以对HttpServletResponse 进行后处理，是个典型的处理链。
+ * 优点：过滤链的好处是，执行过程中任何时候都可以打断，
+ * 只要不执行chain.doFilter()就不会再执行后面的过滤器和请求的内容。
+ * 而在实际使用时，就要特别注意过滤链的执行顺序问题
  * Created by linkage on 2016-12-13.
  */
 public class LogFilter implements Filter {

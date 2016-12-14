@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -31,6 +32,8 @@ public class ServletTest1 extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session=request.getSession();
+        session.setAttribute("new","测试新增属性");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
@@ -43,6 +46,8 @@ public class ServletTest1 extends HttpServlet {
         out.println("  </BODY>");
         out.println("</HTML>");
         out.flush();
+        session.setAttribute("new","测试修改属性");
+        session.removeAttribute("new");
         out.close();
     }
 
