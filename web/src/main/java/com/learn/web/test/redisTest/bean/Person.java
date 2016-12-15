@@ -40,4 +40,8 @@ public class Person {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public String toString(){
+        return "name="+this.name+",age="+this.age+",height="+this.height+",sex="+this.sex;
+    }
 }

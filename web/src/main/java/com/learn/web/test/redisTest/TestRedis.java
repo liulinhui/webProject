@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by linkage on 2016-12-14.
@@ -33,12 +35,13 @@ public class TestRedis {
         person.setHeight(666);
         person.setName("张伟");
         person.setSex("女人");
-        List<Person> personList = new ArrayList<>();
+        Map<String, Person> map = new HashMap<>();
         for (int i = 0; i < 100; i++)
-            personList.add(i,person);
+            map.put(i + "", person);
         ProtostuffTest protostuffTest = new ProtostuffTest();
-//        redisClientTemplate.setex("对象".getBytes(), 3000,protostuffTest.serializeProtoStuffProductsList(personList).toArray());
-        return protostuffTest.deserializeProtoStuffDataListToProductsList(
-                protostuffTest.serializeProtoStuffProductsList(personList)).size()+"";
+        redisClientTemplate.hmset("对象".getBytes(), protostuffTest.serializeProtoStuffProductsList(map));
+        Map<String, Person> mapRes=protostuffTest.deserializeProtoStuffDataListToProductsList(
+                redisClientTemplate.hgetAll("对象".getBytes()));
+        return mapRes.toString();
     }
 }
