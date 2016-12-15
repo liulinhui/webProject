@@ -1,7 +1,6 @@
 package com.learn.web.test.redisTest.bean;
 
 import com.dyuproject.protostuff.LinkedBuffer;
-import com.dyuproject.protostuff.Pipe;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
 import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;

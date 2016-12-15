@@ -287,7 +287,7 @@
             <version>1.0.2.RELEASE</version>
         </dependency>
 
-        <!--protostuff -->
+        <!--序列化protostuff -->
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
