@@ -31,6 +31,7 @@
         <log4j.version>1.2.17</log4j.version>
         <slf4j.log4j.version>1.7.1</slf4j.log4j.version>
         <io.vertx.version>3.3.3</io.vertx.version>
+        <protostuff.version>1.0.9</protostuff.version>
     </properties>
     <dependencies>
         <dependency>
@@ -244,9 +245,9 @@
 
         <!-- com.google.guava/guava -->
         <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>19.0</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
         </dependency>
 
         <!-- netty -->
@@ -284,6 +285,18 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
             <version>1.0.2.RELEASE</version>
+        </dependency>
+
+        <!--protostuff -->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${protostuff.version}</version>
         </dependency>
 
 
