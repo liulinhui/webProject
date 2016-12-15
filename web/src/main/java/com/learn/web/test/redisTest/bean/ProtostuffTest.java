@@ -31,7 +31,7 @@ public class ProtostuffTest {
         Map<byte[],byte[]> bytes = new HashMap<>();
         Schema<Person> schema = RuntimeSchema.getSchema(Person.class);
         Schema<String> KeySchema = RuntimeSchema.getSchema(String.class);
-        LinkedBuffer buffer = LinkedBuffer.allocate(4096);
+        LinkedBuffer buffer = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
         byte[] KeyProtostuff = null;
         byte[] valueProtostuff=null;
         for (String key: pList.keySet()) {
