@@ -1,5 +1,8 @@
 package com.learn.web.test.redisTest;
 
+import com.google.common.primitives.Bytes;
+import com.learn.web.test.redisTest.bean.Person;
+import com.learn.web.test.redisTest.bean.ProtostuffTest;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by linkage on 2016-12-14.
@@ -19,22 +27,21 @@ public class TestRedis {
     @Autowired
     private RedisClientTemplate redisClientTemplate;
 
-    @RequestMapping(value = "/test",produces = {"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/test", produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String index() {
-        logger.error("===========error错误日志测试=================================");
-        logger.warn("==============warn错误日志测试=================================");
-        logger.fatal("==============fatal错误日志测试=================================");
-        for (int i = 0; i < 100; i++){
-            redisClientTemplate.setex("index" + i,20000, "操你大爷的，这是第" + i + "个数啦！！！！");
-            System.out.println(redisClientTemplate.ttl("index" + i));
-            redisClientTemplate.expire("index" + i,5);
-        }
-        StringBuffer sb = new StringBuffer();
+        Person person = new Person();
+        person.setAge(9);
+        person.setHeight(666);
+        person.setName("张伟");
+        person.setSex("女人");
+        Map<String, Person> map = new HashMap<>();
         for (int i = 0; i < 100; i++)
-            sb.append(redisClientTemplate.get("index" + i));
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("result",sb.toString());
-        return jsonObject.toString();
+            map.put(i + "", person);
+        ProtostuffTest protostuffTest = new ProtostuffTest();
+        redisClientTemplate.hmset("对象".getBytes(), protostuffTest.serializeProtoStuffProductsList(map));
+        Map<String, Person> mapRes=protostuffTest.deserializeProtoStuffDataListToProductsList(
+                redisClientTemplate.hgetAll("对象".getBytes()));
+        return mapRes.toString();
     }
 }
