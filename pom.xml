@@ -326,11 +326,11 @@
             <version>1.4.0.RELEASE</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.github.lwhite1</groupId>-->
-            <!--<artifactId>tablesaw</artifactId>-->
-            <!--<version>0.7.6.4</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.github.lwhite1</groupId>
+            <artifactId>tablesaw</artifactId>
+            <version>0.7.6.4</version>
+        </dependency>
 
 
         <!-- 数据库连接池 jar -->
