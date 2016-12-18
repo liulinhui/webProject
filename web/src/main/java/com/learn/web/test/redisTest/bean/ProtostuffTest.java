@@ -26,7 +26,7 @@ public class ProtostuffTest {
      * @param <V>
      * @return
      */
-    public <K extends Object,V extends Object> Map<byte[],byte[]> serializeProtoStuffMap(
+    public <K extends Object,V extends Object> Map<byte[],byte[]> serializeMap(
             Map<K,V> pList,Class<K> typeKClass,Class<V>typeVClass){
         if (pList == null || pList.size() <= 0) {
             return null;
@@ -63,7 +63,7 @@ public class ProtostuffTest {
      * @param <V>
      * @return
      */
-    public <K extends Object,V extends Object> Map<K,V> deserializeProtoStuffToMap(
+    public <K extends Object,V extends Object> Map<K,V> deserializeToMap(
             Map<byte[],byte[]>map,Class<K> typeKClass,Class<V>typeVClass){
         if (map == null || map.keySet().size() <= 0) {
             return null;
