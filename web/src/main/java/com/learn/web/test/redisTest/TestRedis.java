@@ -39,9 +39,9 @@ public class TestRedis {
         for (int i = 0; i < 100; i++)
             map.put(i + "", person);
         ProtostuffTest protostuffTest = new ProtostuffTest();
-        redisClientTemplate.hmset("对象".getBytes(), protostuffTest.serializeProtoStuffProductsList(map));
-        Map<String, Person> mapRes=protostuffTest.deserializeProtoStuffDataListToProductsList(
-                redisClientTemplate.hgetAll("对象".getBytes()));
+        redisClientTemplate.hmset("对象".getBytes(), protostuffTest.serializeProtoStuffMap(map,String.class,Person.class));
+        Map<String, Person> mapRes=protostuffTest.deserializeProtoStuffToMap(
+                redisClientTemplate.hgetAll("对象".getBytes()),String.class,Person.class);
         return mapRes.toString();
     }
 }

@@ -19,22 +19,26 @@ public class ProtostuffTest {
 
     /**
      * 序列化
-     *
      * @param pList
+     * @param typeKClass
+     * @param typeVClass
+     * @param <K>
+     * @param <V>
      * @return
      */
-    public Map<byte[],byte[]> serializeProtoStuffProductsList(Map<String,Person> pList) {
+    public <K extends Object,V extends Object> Map<byte[],byte[]> serializeProtoStuffMap(
+            Map<K,V> pList,Class<K> typeKClass,Class<V>typeVClass){
         if (pList == null || pList.size() <= 0) {
             return null;
         }
         long start = System.currentTimeMillis();
         Map<byte[],byte[]> bytes = new HashMap<>();
-        Schema<Person> schema = RuntimeSchema.getSchema(Person.class);
-        Schema<String> KeySchema = RuntimeSchema.getSchema(String.class);
+        Schema<V> schema = RuntimeSchema.getSchema(typeVClass);
+        Schema<K> KeySchema = RuntimeSchema.getSchema(typeKClass);
         LinkedBuffer buffer = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
         byte[] KeyProtostuff = null;
         byte[] valueProtostuff=null;
-        for (String key: pList.keySet()) {
+        for (K key: pList.keySet()) {
             try {
                 KeyProtostuff = ProtostuffIOUtil.toByteArray(key, KeySchema, buffer);
                 buffer.clear();
@@ -52,22 +56,34 @@ public class ProtostuffTest {
 
     /**
      * 反序列化
+     * @param map
+     * @param typeKClass
+     * @param typeVClass
+     * @param <K>
+     * @param <V>
      * @return
      */
-    public Map<String,Person> deserializeProtoStuffDataListToProductsList(Map<byte[],byte[]>map) {
+    public <K extends Object,V extends Object> Map<K,V> deserializeProtoStuffToMap(
+            Map<byte[],byte[]>map,Class<K> typeKClass,Class<V>typeVClass){
         if (map == null || map.keySet().size() <= 0) {
             return null;
         }
         long start = System.currentTimeMillis();
-        Schema<Person> schema = RuntimeSchema.getSchema(Person.class);
-        Schema<String> KeySchema = RuntimeSchema.getSchema(String.class);
-        Map<String,Person> mapRes = new HashMap<>();
+        Schema<V> schema = RuntimeSchema.getSchema(typeVClass);
+        Schema<K> KeySchema = RuntimeSchema.getSchema(typeKClass);
+        Map<K,V> mapRes = new HashMap<>();
         for (byte[] key : map.keySet()) {
-            String s=new String();
-            Person person = new Person();
-            ProtostuffIOUtil.mergeFrom(map.get(key), person, schema);
-            ProtostuffIOUtil.mergeFrom(key, s, KeySchema);
-            mapRes.put(s,person);
+            K k=null;
+            V v=null;
+            try{
+                k=typeKClass.newInstance();
+                v = typeVClass.newInstance();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            ProtostuffIOUtil.mergeFrom(map.get(key), v, schema);
+            ProtostuffIOUtil.mergeFrom(key, k, KeySchema);
+            mapRes.put(k,v);
         }
         long end = System.currentTimeMillis();
         logger.info("反序列化消耗时间为：" + (end - start));
