@@ -1,4 +1,4 @@
-package com.learn.springTest.springAction;
+package com.learn.springTest.springAction.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
