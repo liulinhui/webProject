@@ -32,7 +32,7 @@ public class test {
         List<user> user = testMapper.getUser();
         System.out.println(testMapper.getUser().get(0).getName() + "=======" + testMapper.getUser().get(0).getPassword());
         System.out.println(testMapper.getUsername("123").size());
-        ExceptionTest();
+//        ExceptionTest();
         return "test.ftl";
     }
 

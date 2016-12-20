@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--freemarker-->
     <bean id="handlerMapping"
           class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
@@ -26,10 +26,14 @@
         <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
         <property name="viewNames" value="*.ftl"/>
         <property name="contentType" value="text/html; charset=utf-8"/>
-        <property name="cache" value="true"/>
-        <property name="prefix" value=""/>
+        <!--<property name="cache" value="true"/>-->
+        <!--<property name="prefix" value=""/>-->
         <property name="suffix" value=""/>
-        <property name="order" value="2"/>
+        <property name="order" value="0"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <!-- 在页面中使用${rc.contextPath}就可获得contextPath -->
+        <property name="requestContextAttribute" value="rc"/>
         <!--<property name="requestContextAttribute" value="request" />-->
         <!--&lt;!&ndash; 将请求和会话属性作为变量暴露给FreeMarker模板使用。要做到这一点，可以设置exposeRequestAttributes或者exposeSessionAttributes为true &ndash;&gt;-->
         <!--<property name="exposeRequestAttributes" value="true" />-->
@@ -42,4 +46,5 @@
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     </bean>
+
 </beans>

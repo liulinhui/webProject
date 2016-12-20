@@ -1,6 +1,7 @@
 package com.learn.web.common.exception;
 
 import org.springframework.stereotype.Component;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerExceptionResolverComposite;
 
@@ -16,7 +17,7 @@ import java.util.Map;
 public class ExceptionHandler extends HandlerExceptionResolverComposite {
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
                                          Exception ex) {
-        Map<String, Object> model = new HashMap<String, Object>();
+        ModelMap model=new ModelMap();
         model.put("ex", ex);
         // 根据不同错误转向不同页面
         if (ex instanceof BusinessException) {
