@@ -2,6 +2,9 @@ package com.learn.springTest.springAction;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration;
+
 /**
  * Created by linkage on 2016-12-19.
  */
@@ -19,5 +22,14 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{WebConfig.class};
+    }
+
+    /**
+     * 实现此方法可进行多项配置
+     *
+     * @param registration
+     */
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+        registration.setMultipartConfig(new MultipartConfigElement("/temp/uploads"));
     }
 }
