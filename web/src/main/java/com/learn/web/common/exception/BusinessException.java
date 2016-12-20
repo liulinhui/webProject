@@ -4,7 +4,6 @@ package com.learn.web.common.exception;
  * Created by linkage on 2016-12-13.
  */
 public class BusinessException extends RuntimeException {
-    /** serialVersionUID */
     private static final long serialVersionUID = 2332608236621015980L;
 
     private String code;

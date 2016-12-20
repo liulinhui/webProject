@@ -16,13 +16,12 @@ import java.util.Map;
 @Component
 public class ExceptionHandler extends HandlerExceptionResolverComposite {
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
-                                         Exception ex) {
+                                         Exception exception) {
         ModelMap model=new ModelMap();
-        model.put("ex", ex);
-        // 根据不同错误转向不同页面
-        if (ex instanceof BusinessException) {
+        model.put("ex", exception);
+        if (exception instanceof BusinessException) {
             return new ModelAndView("404.ftl", model);
-        } else if (ex instanceof ParameterException) {
+        } else if (exception instanceof ParameterException) {
             return new ModelAndView("404.ftl", model);
         } else {
             return new ModelAndView("404.ftl", model);

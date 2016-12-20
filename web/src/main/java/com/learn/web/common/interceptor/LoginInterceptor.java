@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by liulinhui on 16-8-27.
  */
-public class CommonInterceptor extends HandlerInterceptorAdapter {
-    private static Logger logger = LoggerFactory.getLogger(CommonInterceptor.class);
+public class LoginInterceptor extends HandlerInterceptorAdapter {
+    private static Logger logger = LoggerFactory.getLogger(LoginInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

@@ -4,8 +4,6 @@ package com.learn.web.common.exception;
  * Created by linkage on 2016-12-13.
  */
 public class ParameterException extends RuntimeException {
-
-    /** serialVersionUID */
     private static final long serialVersionUID = 6417641452178955756L;
 
     public ParameterException() {
