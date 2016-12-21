@@ -4,9 +4,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerExceptionResolverComposite;
-
+import org.apache.commons.lang.exception.ExceptionUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.common.net.InetAddresses;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,6 +20,7 @@ public class ExceptionHandler extends HandlerExceptionResolverComposite {
                                          Exception exception) {
         ModelMap model=new ModelMap();
         model.put("ex", exception);
+        model.put("info",ExceptionUtils.getFullStackTrace(exception));
         if (exception instanceof BusinessException) {
             return new ModelAndView("404.ftl", model);
         } else if (exception instanceof ParameterException) {

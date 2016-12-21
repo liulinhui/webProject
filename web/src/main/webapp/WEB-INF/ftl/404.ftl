@@ -5,7 +5,10 @@
     <title>4041</title>
 </head>
 <body>
-404  la33222333sfwedef
+
 ${ex}
+<br>
+错误信息：
+${info}
 </body>
 </html>

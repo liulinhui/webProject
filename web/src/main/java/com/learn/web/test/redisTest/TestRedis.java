@@ -39,7 +39,7 @@ public class TestRedis {
         List<String> list=new ArrayList<>();
         for (int i = 0; i < 100; i++){
             map.put(i + "", person);
-            list.get(i);
+//            list.get(i);
         }
         ProtostuffTest protostuffTest = new ProtostuffTest();
         redisClientTemplate.hmset("对象".getBytes(), protostuffTest.serializeMap(map,String.class,Person.class));
