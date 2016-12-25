@@ -22,7 +22,6 @@
         <!--指定Maven用什么编码来呈现站点的HTML文件 -->
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <mysql.version>5.1.25</mysql.version>
-        <hibernate.version>4.2.2.Final</hibernate.version>
         <spring.version>4.3.2.RELEASE</spring.version>
         <spring-security.version>4.1.2.RELEASE</spring-security.version>
         <resteasy.version>3.0.19.Final</resteasy.version>

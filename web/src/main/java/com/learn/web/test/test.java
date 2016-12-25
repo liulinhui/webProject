@@ -25,12 +25,12 @@ public class test {
     @Autowired
     private TestMapper testMapper;
 
-    @Log(name = "您访问了index方法")
+//    @Log(name = "您访问了index方法")
     @RequestMapping(value = "/index.html", method = {RequestMethod.GET})
     public String index(ModelMap model, HttpServletRequest request) throws Exception {
         model.put("webTest", test);
         List<user> user = testMapper.getUser();
-        System.out.println(testMapper.getUser().get(0).getName() + "=======" + testMapper.getUser().get(0).getPassword());
+        System.out.println(user.get(0).getName() + "=======" + user.get(0).getPassword());
         System.out.println(testMapper.getUsername("123").size());
 //        ExceptionTest();
         return "test.ftl";
