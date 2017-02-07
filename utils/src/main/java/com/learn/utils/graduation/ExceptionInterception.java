@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
-import com.mysql.jdbc.StringUtils;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -38,10 +37,6 @@ public class ExceptionInterception implements HandlerExceptionResolver {
         model.put("errorTrace",stackTrace.split("(Native Method)")[0]);
 
         String errorMsg = e.getMessage();
-
-        if(!StringUtils.isNullOrEmpty(errorMsg)) {
-        	model.put("errorMsg",errorMsg);
-        }
 
         if (e instanceof Exception || e instanceof NoSuchElementException) {
             return new ModelAndView("error.ftl",model);
