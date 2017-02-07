@@ -10,3 +10,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.idea/
+bean/bean.iml
+java/java.iml
+servletTest/servletTest.iml
+springTest/springTest.iml
+utils/utils.iml
+web/web.iml
+webProject.iml
