@@ -3,43 +3,62 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <filter>
-        <filter-name>logfilter</filter-name>
-        <filter-class>com.learn.servletTest.filter.LogFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>logfilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>logfilter</filter-name>-->
+        <!--<filter-class>com.learn.servletTest.filter.LogFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>logfilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
 
-    <listener>
-        <listener-class>com.learn.servletTest.listener.HttpSessionListenerDemo</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>com.learn.servletTest.listener.HttpSessionListenerDemo</listener-class>-->
+    <!--</listener>-->
 
-    <listener>
-        <listener-class>com.learn.servletTest.listener.ServletContextListenerDemo</listener-class>
-    </listener>
-    
-    <listener>
-        <listener-class>com.learn.servletTest.listener.HttpSessionAttributeListenerDemo</listener-class>
-    </listener>
-    <listener>
-        <listener-class>com.learn.servletTest.listener.ServletContextListenerDemo</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>com.learn.servletTest.listener.HttpSessionAttributeListenerDemo</listener-class>-->
+    <!--</listener>-->
 
+    <!--<listener>-->
+        <!--<listener-class>com.learn.servletTest.listener.ServletContextListenerDemo</listener-class>-->
+    <!--</listener>-->
+
+
+    <!--<servlet>-->
+        <!--<servlet-name>ServletTest1</servlet-name>-->
+        <!--<servlet-class>com.learn.servletTest.servletCycle.ServletTest1</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>name</param-name>-->
+            <!--<param-value>fuck</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>ServletTest1</servlet-name>-->
+        <!--<url-pattern>/servletCycle/ServletTest1</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <context-param>
+        <param-name>resteasy.guice.modules</param-name>
+        <param-value>com.learn.resteasy.guice.HelloModule</param-value>
+    </context-param>
+    <listener>
+        <listener-class>
+            org.jboss.resteasy.plugins.guice.GuiceResteasyBootstrapServletContextListener
+        </listener-class>
+    </listener>
 
     <servlet>
-        <servlet-name>ServletTest1</servlet-name>
-        <servlet-class>com.learn.servletTest.servletCycle.ServletTest1</servlet-class>
-        <init-param>
-            <param-name>name</param-name>
-            <param-value>fuck</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
+        <servlet-name>Resteasy</servlet-name>
+        <servlet-class>
+            org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+        </servlet-class>
     </servlet>
+
     <servlet-mapping>
-        <servlet-name>ServletTest1</servlet-name>
-        <url-pattern>/servletCycle/ServletTest1</url-pattern>
+        <servlet-name>Resteasy</servlet-name>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
     <session-config>
