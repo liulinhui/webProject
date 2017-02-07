@@ -11,5 +11,6 @@ import java.util.List;
 @Component
 public interface TestMapper {
     List<user> getUser();
+
     List<user> getUsername(String name);
 }

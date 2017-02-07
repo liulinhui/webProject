@@ -25,3 +25,5 @@ web/target/
 java/target/
 servletTest/target/
 springTest/target/
+java/src/main/java/com/learn/java/io/
+springTest/src/test/
