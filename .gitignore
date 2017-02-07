@@ -19,3 +19,9 @@ springTest/springTest.iml
 utils/utils.iml
 web/web.iml
 webProject.iml
+bean/target/
+utils/target/
+web/target/
+java/target/
+servletTest/target/
+springTest/target/
